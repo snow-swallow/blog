@@ -9,7 +9,8 @@
   * [Vue](FED/Vue.md)
 * [DevOps](DevOps/index.md)
   * [Pipeline](DevOps/pipeline.md)
-  * [Tools](DevOps/tool_chain.md.md)
+  * [Tools](DevOps/tool_chain.md)
+  * [GoogleSRE Review](DevOps/GoogleSRE_Review.md)
 
 ## test part
 
