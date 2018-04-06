@@ -1,4 +1,4 @@
-## Cordova 和 IBM Worklight
+## Cordova 工作原理
 
 1. 整体架构 - Architecture Overview Diagram from Cordova website
 
@@ -45,6 +45,15 @@
         }
     }
     ```
+    ![Cordova UML](../images/cordova_uml.jpg)
+
+    简单分析下，CordovaActivity内依赖一个WebView类，一个Preferences类，一个CordovaInterface接口，并同时初始化一些配置信息。WebView具体实现是由CordovaWebViewImpl类，CordovaInterface接口具体实现是由CordovaInterfaceImpl类实现。
+
+    CordovaWebViewImpl是核心类，里面会把一些插件能力初始化，用一个PluginManager进行管理，包含一个引擎类—CordovaWebViewEngine，这个引擎是通过反射的方式创建，自身初始化的时候把NativeToJsMessageQueue关联起来，里面包含着以Js字符串为主的双向链表，把每次从前端通过JS代码存储起来，然后通过绑定的桥接方式Pop出到相应的Native代码中去。
+
+    最终实现由SystemWebViewEngine类来对Android系统中WebView控件进行二次包装，这个类的初始化是在CordovaWebViewImpl类反射创建，相关插件和消息传递也是通过SystemWebViewEngine进行绑定。
+
+3. Cordova Workflow
 
     当Cordova框架启动时候，CordovaActivity类中的onCreate方法调用loadUrl方法即可启动，最终在SystemWebViewEngine类的init方法中，会调用webView的addJavascriptInterface方法，看到这个方法是不是很熟悉，我们常规让webView支持开启JavaScript调用接口也是使用此特性。
     ```
@@ -86,12 +95,6 @@
         }
     }
     ```
-
-3. 插件开发流程
-
-4. IBM Worklight 介绍
-
-5. hybrid app 如何实现 SSO
 
 > References
 - [浅谈Cordova框架的一些理解](https://www.cnblogs.com/cr330326/p/7082821.html)
