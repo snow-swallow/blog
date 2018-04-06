@@ -62,3 +62,4 @@ sir.b.c; // 2
 
 > Reference:
 - [Object.assign()与深拷贝](https://segmentfault.com/a/1190000010661297)
+- [MDN Object.assign()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
