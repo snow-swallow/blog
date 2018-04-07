@@ -1,4 +1,4 @@
-## Frone-end Archtectural Design ##
+## Front-end Archtectural Design ##
 
     Date: 04/07/2018
     Author: Jewel / Yu Zhu, Xu
@@ -16,7 +16,7 @@ Here's some summary based on my previous development experience.
     - all of above?
     > Do I need to develop additional projects to support various clients? Or just share one set of code across different platforms.
     
-    >Is this framework easy to migrate to mobile projects if we do need?
+    > Is this framework easy to migrate to mobile projects if we do need?
     
 2. How does your front-end communicate with your back-end?
     - HTTP
@@ -35,7 +35,7 @@ Here's some summary based on my previous development experience.
 5. Auth Check
     - mem
     - localStorage
-    > This will integrate with your back-end authorization method, like OAuth2, JWT, etc.
+    > This should integrate with your back-end authorization method, like OAuth2, JWT, etc.
 
 6. Lazy load
     - AMD

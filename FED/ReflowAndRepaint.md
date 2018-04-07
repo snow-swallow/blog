@@ -76,9 +76,9 @@ el.className += " theclassname";
 ```
 
 2. 把 DOM 离线后修改。如：
-- 使用 documentFragment 对象在内存里操作 DOM。
-- 先把 DOM 给 display:none (有一次 repaint)，然后你想怎么改就怎么改。比如修改 100 次，然后再把他显示出来。
-- clone 一个 DOM 节点到内存里，然后想怎么改就怎么改，改完后，和在线的那个的交换一下。
+    - 使用 documentFragment 对象在内存里操作 DOM。
+    - 先把 DOM 给 display:none (有一次 repaint)，然后你想怎么改就怎么改。比如修改 100 次，然后再把他显示出来。
+    - clone 一个 DOM 节点到内存里，然后想怎么改就怎么改，改完后，和在线的那个的交换一下。
 
 3. 不要把 DOM 节点的属性值放在一个循环里当成循环里的变量。不然这会导致大量地读写这个结点的属性。
 
