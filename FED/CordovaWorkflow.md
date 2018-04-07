@@ -45,6 +45,22 @@
         }
     }
     ```
+    如果添加的是iOS平台，则生成的是 MainViewController.h 和 MainViewController.m。以下是 `.h`
+    ```
+    #import <Cordova/CDVViewController.h>
+    #import <Cordova/CDVCommandDelegateImpl.h>
+    #import <Cordova/CDVCommandQueue.h>
+
+    @interface MainViewController : CDVViewController
+
+    @end
+
+    @interface MainCommandDelegate : CDVCommandDelegateImpl
+    @end
+
+    @interface MainCommandQueue : CDVCommandQueue
+    @end
+    ```
     ![Cordova UML](../images/cordova_uml.jpg)
 
     简单分析下，CordovaActivity内依赖一个WebView类，一个Preferences类，一个CordovaInterface接口，并同时初始化一些配置信息。WebView具体实现是由CordovaWebViewImpl类，CordovaInterface接口具体实现是由CordovaInterfaceImpl类实现。
