@@ -1,8 +1,12 @@
 ## JavaScript 实现深度拷贝
 
+
+    Date: 04/05/2018
+    Author: Yu Zhu, Xu
+    
 1. 真深拷贝
 	```
-	function deepCopy(source) {
+	function deepClone(source) {
 		var dest = {};
 		var keys = Object.keys(source);
 		for(var idx in keys) {
@@ -19,7 +23,7 @@
 
 2. 一层深拷贝，实则浅拷贝（其实效果就是 `Object.assign(target, ...source)`）
 	```
-	function fakeDeepCopy(source) {
+	function fakeDeepClone(source) {
 		var dest = {};
 		var keys = Object.keys(source);
 		for(var idx in keys) {
@@ -38,8 +42,8 @@
 			c: 1
 		}
 	};
-	let deepFollower = deepCopy(foo);
-	let faker = fakeDeepCopy(foo);
+	let deepFollower = deepClone(foo);
+	let faker = fakeDeepClone(foo);
 	let sir = {self: 1};
 	Object.assign(sir, foo);
 
