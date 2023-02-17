@@ -31,12 +31,12 @@ Password: {输入密码}
 NAME       	URL                                      
 stable     	http://mirror.azure.cn/kubernetes/charts/
 codecentric	https://codecentric.github.io/helm-charts
-csf        	http://127.0.0.1:18080/chartrepo/xyz
+xyz        	http://127.0.0.1:18080/chartrepo/xyz
 
 ## 搜索repo
 ✗ helm search repo my-app
 NAME      	CHART VERSION	APP VERSION	DESCRIPTION                
-csf/dv-app	0.1.0        	1.16.0     	A Helm chart for Kubernetes
+xyz/my-app	0.1.0        	1.16.0     	A Helm chart for Kubernetes
 
 ## 下载chart
 ✗ helm fetch xyz/my-app
