@@ -1,6 +1,3 @@
-helm values中使用变量
-values中使用上文定义的变量
-
 
 ## harbor安装helm 插件
 
@@ -84,3 +81,13 @@ helm list -n my-app
 helm install my-app ./my-helm-chart --dry-run --debug > debug.yaml
 
 ```
+
+
+## helm chart开发遇到的语法问题
+
+1. helm values中使用变量  - printf
+2. values中使用上文定义的变量 - 不允许
+3. base64, random等内置函数
+
+https://pkg.go.dev/text/template
+https://helm.sh/zh/docs/howto/charts_tips_and_tricks/
