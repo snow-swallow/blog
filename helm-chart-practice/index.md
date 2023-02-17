@@ -88,6 +88,7 @@ helm install my-app ./my-helm-chart --dry-run --debug > debug.yaml
 1. helm values中使用变量  - printf
 2. values中使用上文定义的变量 - 不允许
 3. base64, random等内置函数
+4. helm chart内置变量：https://helm.sh/zh/docs/chart_template_guide/builtin_objects/
 
 https://pkg.go.dev/text/template
 https://helm.sh/zh/docs/howto/charts_tips_and_tricks/
