@@ -22,7 +22,7 @@ docker-compose stop
 ✗ helm plugin install https://github.com/chartmuseum/helm-push
 
 ## 添加repo
-✗ helm repo add  csf http://127.0.0.1:18080/chartrepo/xyz --username admin
+✗ helm repo add xyz http://127.0.0.1:18080/chartrepo/xyz --username admin
 Password: {输入密码}
 "xyz" has been added to your repositories
 
@@ -34,7 +34,7 @@ codecentric	https://codecentric.github.io/helm-charts
 csf        	http://127.0.0.1:18080/chartrepo/xyz
 
 ## 搜索repo
-✗ helm search repo dv-app
+✗ helm search repo my-app
 NAME      	CHART VERSION	APP VERSION	DESCRIPTION                
 csf/dv-app	0.1.0        	1.16.0     	A Helm chart for Kubernetes
 
@@ -45,9 +45,10 @@ csf/dv-app	0.1.0        	1.16.0     	A Helm chart for Kubernetes
 ✗ helm package my-helm-chart
 
 ## 上传chart
-✗ helm cm-push ./my-app-0.1.0.tgz csf --insecure
+✗ helm cm-push ./my-app-0.1.0.tgz xyz --insecure
 
 ```
+
 
 
 
