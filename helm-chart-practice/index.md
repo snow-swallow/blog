@@ -90,5 +90,8 @@ helm install my-app ./my-helm-chart --dry-run --debug > debug.yaml
 3. base64, random等内置函数
 4. helm chart内置变量：https://helm.sh/zh/docs/chart_template_guide/builtin_objects/
 
+
+## 常用参考链接
 https://pkg.go.dev/text/template
 https://helm.sh/zh/docs/howto/charts_tips_and_tricks/
+https://www.ssgeek.com/post/helm-chart-yu-fa-gai-yao/
